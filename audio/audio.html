@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>quran</title>
+
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg p-4 position-fixed w-100 top-0">
+        <div class="container">
+            <a class="navbar-brand fs-3 fw-bolder d-lg-none" href="#">Al-quran</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa-solid fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Audio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings/setting.html">Settings</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="searchbtn" class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header class="mt-5 overflow-auto">
+        <div class="container mb-5">
+            <div id="row" class="row t-color px-5">
+                <div class="col-6 s-name"><a href=""></a></div>
+            </div>
+        </div>
+        <div id="modal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="modalTtile" class="modal-title">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </h5>
+                        <button id="close" type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center">
+                            <audio id="audio" controls>
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="closebtn" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="audio.js"></script>
+</body>
+
+</html>
